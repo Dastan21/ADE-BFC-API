@@ -16,6 +16,7 @@ The API is online at https://api.ade-bfc.ldgr.fr/
 
 #### EDT (schedule)
 - `/edt/:id` -> get schedule link of a specific ID
+- `/edt/:id?weeks=2` -> get schedule link in 2 weeks of a specific ID
 
 
 ## How to run
