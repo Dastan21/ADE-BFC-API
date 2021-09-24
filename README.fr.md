@@ -19,11 +19,11 @@ L'API est disponible en ligne sur https://api.ade-bfc.ldgr.fr/.
 ### ID
 ```js
 [
-	{
-		id: 0,
-		name: "",
-		children: [] // s'il y en a
-	}
+  {
+    id: 0,
+    name: "",
+    children: [] // s'il y en a
+  }
 ]
 ```
 
@@ -35,8 +35,8 @@ url [String]
 ### Erreur
 ```js
 {
-	status: "error",
-	message: ""
+  status: "error",
+  message: ""
 }
 ```
 
