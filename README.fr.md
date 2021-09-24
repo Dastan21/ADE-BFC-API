@@ -5,7 +5,7 @@ API pour chercher des ID, de groupes ou de classes, et des EDT (Emploi Du Temps)
 ## Utilisation
 L'API est disponible en ligne sur https://api.ade-bfc.ldgr.fr/.
 
-## Exemples
+## Requête
 - `/id/` -> tous les IDs
 - `/id?type=group` -> seulement les IDs des groupes
 - `/id?type=class` -> seulement les IDs des classes
@@ -15,6 +15,30 @@ L'API est disponible en ligne sur https://api.ade-bfc.ldgr.fr/.
 - `/edt/:id` -> récupérer le lien de l'EDT d'un ID
 - `/edt/:id?weeks=2` -> récupérer le lien de l'EDT dans 2 semaines d'un ID
 
+## Réponse
+### ID
+```js
+[
+	{
+		id: 0,
+		name: "",
+		children: [] // s'il y en a
+	}
+]
+```
+
+### EDT
+```js
+url [String]
+```
+
+### Erreur
+```js
+{
+	status: "error",
+	message: ""
+}
+```
 
 ## Comment démarrer
 Installer les dépendances en premier :

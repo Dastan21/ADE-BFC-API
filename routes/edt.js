@@ -11,12 +11,9 @@ const EDT_URL_REPLACE = {
 
 
 router.get('/:id', (req, res) => {
-	getEDT(req.params.id, req.query).then(url => {
-		res.send({
-			id: req.params.id,
-			url: url
-		});
-	}).catch(err => {
+	getEDT(req.params.id, req.query)
+	.then(url => res.send(url))
+	.catch(err => {
 		const error = { status: "error", message: "Unknown ID" };
 		if (process.env.DEV) error.error = err;
 		res.send(error);
