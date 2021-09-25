@@ -1,4 +1,6 @@
-# ADE-BFC-API
+![ADE BFC](./public/ade_bfc_banner.png)
+
+# ADE BFC API
 
 API pour chercher des IDs, de groupes ou de classes, et des EDTs (Emploi Du Temps) de l'académie de Besançon.
 

@@ -1,4 +1,6 @@
-# ADE-BFC-API
+![ADE BFC](./public/ade_bfc_banner.png)
+
+# ADE BFC API
 
 API to search for IDs, of groups or classes, and schedules of the regional education authority of Besançon.
 
