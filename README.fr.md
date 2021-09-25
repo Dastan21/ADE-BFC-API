@@ -1,4 +1,4 @@
-![ADE BFC](./public/ade_bfc_banner.png)
+![ADE BFC](./public/banner.png)
 
 # ADE BFC API
 
