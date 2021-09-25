@@ -2,7 +2,7 @@
 
 # ADE BFC API
 
-API to search for IDs, of groups or classes, and schedules of the regional education authority of Besançon.
+API to search for groups and get schedules of the regional education authority of Besançon.
 
 ## Usage
 The API is available online at <a href="https://api.ade-bfc.ldgr.fr/" target="_blank">https://api.ade-bfc.ldgr.fr/</a>
