@@ -5,42 +5,10 @@ API to search for IDs, of groups or classes, and schedules of the regional educa
 ## Usage
 The API is available online at https://api.ade-bfc.ldgr.fr/
 
-## Request
-- `/id/` -> all the IDs
-- `/id?type=group` -> only groups IDs
-- `/id?type=class` -> only classes IDs
-- `/id?search=select1;select2;select3` -> search for specifics IDs
-- `/id?search=select1;select2;select3&type=class` -> search for specifics classes IDs
+## Docs
+https://api.ade-bfc.ldgr.fr/docs
 
-- `/edt/:id` -> get schedule link of an ID
-- `/edt/:id?weeks=2` -> get schedule link in 2 weeks of an ID
-
-## Response
-### ID
-```js
-[
-  {
-    id: 0,
-    name: "",
-    children: [] // if there is any
-  }
-]
-```
-
-### EDT
-```js
-url [String]
-```
-
-### Error
-```js
-{
-  status: "error",
-  message: ""
-}
-```
-
-## How to run
+## Self hosting
 Install the dependencies first:
 ```
 npm install
