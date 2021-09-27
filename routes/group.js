@@ -13,7 +13,7 @@ function getFilteredGroups(groups, query) {
 		search: query.search ? query.search.split(';').map(s => s.toLowerCase()) : null,
 		type: types[query.type]
 	};
-	if (!filters.search) return groups.filter(group => filters.type === !group.children);
+	if (!filters.search) return groups.filter(group => filters.type !== !!group.children);
 	return Object.values(flattenGroups(groups, filters)).map(group => ({ id: group.id, name: group.name }));
 }
 
