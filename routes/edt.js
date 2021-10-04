@@ -11,21 +11,19 @@ const EDT_URL_REPLACE = {
 };
 
 router.get('/:id', (req, res) => {
-	getEDT(req.params.id, req.query)
-	.then(url => res.send(url))
-	.catch(err => {
+	getEDT(req.params.id, req.query).then(img => {
+		res.set({ 'Content-Type': 'image/jpeg' }).end(img, 'binary');
+	}).catch(() => {
 		const error = { status: "error", message: "Unknown group" };
-		if (process.env.DEV) error.error = err;
 		res.send(error);
 	});
 });
 
-async function getEDT(id, { weeks = 0, ...query }) {
-	return new Promise((resolve, reject) => {
-		get(process.env.PLANIF_URL + '?id=' + id + "&jours=" + (7 * (Number(weeks) + 1))).then(res => {
-			const matches = res.data.matchAll(/^<a href="(https:.+)">Affichage planning<\/a>/gm);
-			resolve(Array.from(matches, m => m[1])[0].replace(new RegExp(Object.keys(EDT_URL_REPLACE).join("|"), "gi"), matched => EDT_URL_REPLACE[matched](query)));
-		}).catch(reject);
+function getEDT(id, { weeks = 0, ...query }) {
+	return get(process.env.PLANIF_URL + '?id=' + id + "&jours=" + (7 * (Number(weeks) + 1))).then(res => {
+		const matches = res.data.matchAll(/^<a href="(https:.+)">Affichage planning<\/a>/gm);
+		const url = Array.from(matches, m => m[1])[0].replace(new RegExp(Object.keys(EDT_URL_REPLACE).join("|"), "gi"), matched => EDT_URL_REPLACE[matched](query));
+		return get(url, { responseType: 'arraybuffer' }).then(res => res.data);
 	});
 }
 

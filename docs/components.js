@@ -24,7 +24,8 @@ module.exports = {
 			},
 			edt: {
 				type: "string",
-				description: "Url of the EDT"
+				format: "binary",
+				description: "EDT image"
 			},
 			weeks: {
 				type: "integer",

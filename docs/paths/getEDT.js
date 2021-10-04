@@ -44,7 +44,7 @@ module.exports = {
 		],
 		responses: {
 			200: {
-				description: "List of IDs",
+				description: "EDT image",
 				content: {
 					"application/json": {
 						schema: {
