@@ -12,5 +12,11 @@ router.use('/docs',
 		customfavIcon: "../favicon.ico"
 	})
 );
+router.use('/:path', (_req, res) => {
+	res.status(404).send({ status: "error", message: "API not found" });
+});
+router.use('/', (_, res) => {
+	res.redirect('/docs');
+});
 
 module.exports = router;

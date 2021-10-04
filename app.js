@@ -15,8 +15,5 @@ app.use((_, res, next) => {
 
 const indexRouter = require('./routes');
 app.use('/', indexRouter);
-app.use((_req, res) => {
-	res.status(404).send({ status: "error", message: "API not found" });
-});
 
 module.exports = app;
