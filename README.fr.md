@@ -2,6 +2,8 @@
 
 # ADE BFC API
 
+> /!\ Les liens ci-dessous ne sont plus actifs !
+
 API pour chercher des groupes et obtenir des emplois du temps de l'académie de Besançon.
 
 ## Utilisation

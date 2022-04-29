@@ -2,6 +2,8 @@
 
 # ADE BFC API
 
+> /!\ Links bellow are not up anymore!
+
 API to search for groups and get schedules of the regional education authority of Besançon.
 
 ## Usage
